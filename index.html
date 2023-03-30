@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Discord Bot</title>
+  </head>
+  <body>
+    <h1>Discord Bot</h1>
+    <div id="content"></div>
+    <script>
+      // Pobierz zawartość bota Discord z serwera
+      fetch('https://localhost:3000')
+        .then(response => response.text())
+        .then(data => {
+          // Wyświetl zawartość bota Discord
+          const content = document.getElementById('content');
+          content.innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
